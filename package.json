@@ -1,0 +1,55 @@
+{
+  "name": "polhint",
+  "version": "1.5.0",
+  "description": "Polynomial Code Linter",
+  "main": "polhint.js",
+  "keywords": [
+    "polynomial",
+    "linter",
+    "security-scanner",
+    "sophon",
+    "ast",
+    "developer-tools",
+    "code-quality",
+    "smart-contracts"
+  ],
+  "homepage": "https://susylint.github.io/polhint/",
+  "repository": "https://github.com/susy-contracts/polhint",
+  "scripts": {
+    "exec-tests": "nyc -x \"**/grammar/**\" mocha && nyc report --reporter=text-lcov | coveralls",
+    "test": "npm run exec-tests",
+    "test-only": "mocha",
+    "generate": "scripts/build-grammar.sh",
+    "lint": "eslint ."
+  },
+  "bin": {
+    "polhint": "polhint.js"
+  },
+  "author": "Ilya Drabenia <ilya.drobenya@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "antlr4": "4.7.1",
+    "commander": "2.18.0",
+    "eslint": "^5.6.0",
+    "fast-diff": "^1.1.2",
+    "glob": "7.1.3",
+    "ignore": "^4.0.6",
+    "lodash": "^4.17.11",
+    "prettier-linter-helpers": "^1.0.0"
+  },
+  "devDependencies": {
+    "assert": "1.4.1",
+    "coveralls": "^3.0.2",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "mocha": "^5.2.0",
+    "mocha-lcov-reporter": "1.3.0",
+    "nyc": "^13.0.1"
+  },
+  "optionalDependencies": {
+    "prettier": "^1.14.3",
+    "prettier-plugin-polynomial": "^1.0.0-alpha.4"
+  }
+}

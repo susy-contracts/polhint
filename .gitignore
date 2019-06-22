@@ -1,0 +1,10 @@
+/node_modules/
+/.idea/
+.polhint.json
+test2.pol
+convertLib.pol
+/.nyc_output/
+/coverage/
+/docs/_site/
+/docs/Gemfile*
+antlr4.jar
